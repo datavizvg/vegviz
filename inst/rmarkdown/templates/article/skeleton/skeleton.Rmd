@@ -1,0 +1,81 @@
+---
+title: "TODO"
+author: "Colin Fay"
+date: TODO
+slug: "TODO"
+categories: ["TODO"]
+tags: ["TODO", "TODO"]
+draft: true
+params:
+  table: TODO.csv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  echo = FALSE, 
+  warning = FALSE, 
+  message = FALSE
+)
+```
+
+### `r emo::ji("mag_right")` About the source 
+
+::: {.source}
+
+::: 
+
+::: {.link}
+[]()
+:::
+
+::: {.quote}
+> 
+:::
+
+::: {.count}
+> 
+:::
+
+```{r}
+library(tidyverse)
+library(magrittr)
+library(vegviz)
+if (!file.exists(
+  params$table
+)){
+  # READ DATA HERE
+   blabla() %>%
+    # MANIPULATE
+    blabla() %>%
+    # WRITE
+    readr::write_csv(params$table)
+}
+
+
+```
+
+
+### `r emo::ji("chart_with_upwards_trend")` Visualising the data
+
+Visualization of _TODO_.
+
+```{r}
+# DATA MANIP
+source_table <- readr::read_csv(params$table)
+```
+
+
+Potential comment (either `r knitr::combine_words(adjusted_table$x, and = "or ")`).
+
+```{r fig.dim = c(12, 8)}
+# VIZ
+source_table %>%
+  
+```
+
+`r details::details(knitr::kable(source_table, format = "html"), summary = "Show the data",lang  = NULL)`
+
+::: {.code}
+Code behind this post is available `r build_link(knitr::current_input())`. 
+:::
